@@ -1,0 +1,52 @@
+<%- include("partials/header") -%>
+
+<form action="/getstaff" method="post">
+    <div class="btn-group">
+        <label for="branch" class="btn btn-secondary ">Choose a branch</label>
+        <select name="branch" id="branch" class="btn">
+          <option value="all">all</option>
+          <option value="B001">B001</option>
+          <option value="B002">B002</option>
+          <option value="B003">B003</option>
+        </select>
+    </div>
+    <button type="submit" class="btn">submit</button>
+</form>
+
+<hr>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">staffNo</th>
+      <th scope="col">branchNo</th>
+      <th scope="col">fname</th>
+      <th scope="col">lname</th>
+      <th scope="col">position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if(result.length==0){ %>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td></td>
+        <td> </td>
+       
+      </tr>
+      <% }else{ %>
+    <% result.forEach((item) => { %>
+      <tr>
+        <td><%= item.staffNo %></td>
+        <td><%= item.branchNo %></td>
+        <td><%= item.fname %></td>
+        <td><%= item.lname %></td>
+        <td><%= item.position %></td>
+      </tr>
+    <% }) %>
+    <% } %>
+  </tbody>
+
+</table>

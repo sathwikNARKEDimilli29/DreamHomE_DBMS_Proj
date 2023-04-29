@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi-Level Form</title>
+  </head>
+  <body>
+    <h1>Multi-Level Form</h1>
+    <form>
+      <h2>Level 1</h2>
+      <label for="field1">Field 1:</label>
+      <input type="text" id="field1" name="field1"><br><br>
+      <label for="field2">Field 2:</label>
+      <input type="text" id="field2" name="field2"><br><br>
+      <button type="button" onclick="nextLevel(2)">Next</button>
+
+      <div id="level2" style="display:none">
+        <h2>Level 2</h2>
+        <label for="field3">Field 3:</label>
+        <input type="text" id="field3" name="field3"><br><br>
+        <label for="field4">Field 4:</label>
+        <input type="text" id="field4" name="field4"><br><br>
+        <button type="button" onclick="prevLevel(1)">Previous</button>
+        <button type="button" onclick="nextLevel(3)">Next</button>
+      </div>
+
+      <div id="level3" style="display:none">
+        <h2>Level 3</h2>
+        <label for="field5">Field 5:</label>
+        <input type="text" id="field5" name="field5"><br><br>
+        <label for="field6">Field 6:</label>
+        <input type="text" id="field6" name="field6"><br><br>
+        <button type="button" onclick="prevLevel(2)">Previous</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    
+    <script>
+      function nextLevel(level) {
+        document.getElementById("level" + level).style.display = "none";
+        document.getElementById("level" + (level + 1)).style.display = "block";
+      }
+      
+      function prevLevel(level) {
+        document.getElementById("level" + level).style.display = "none";
+        document.getElementById("level" + (level - 1)).style.display = "block";
+      }
+    </script>
+  </body>
+</html>

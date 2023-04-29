@@ -1,0 +1,63 @@
+<%- include("partials/header") -%>
+
+<form method="post" action="/advertise">
+    <div class="form-group row">
+        <label for="propertyNo" class="col-sm-2 col-form-label"><h4><strong>Enter The Property No.</strong></h4></label>
+        <div class="col-sm-10">
+          <input name="propertyNo" type="text" class="form-control" id="inputPassword" placeholder="propertyNo">
+        </div>
+      </div>
+
+
+</br>
+</br>
+</br>
+
+<div class="card-deck">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Free</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+            </ul>
+            <button type="submit" class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+
+            </ul>
+            <button type="submit" class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-dark">
+          <div class="card-header py-3 text-bg-light border-dark">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+            </ul>
+            <button type="submit" class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+</form>
+
+<%- include("partials/footer") -%>

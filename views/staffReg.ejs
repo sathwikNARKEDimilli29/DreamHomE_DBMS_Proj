@@ -1,0 +1,185 @@
+<%- include("partials/header") -%>
+<div class="wrapper wrapper--w790">
+    <div class="card card-5">
+        <div class="card-heading">
+            <h1 class="title">DREAM HOME </h1>
+            <h2 class="title">staff registration form</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div>
+                    <div class="form-row m-b-55">
+                        <div class="name">staff id</div>
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group-desc">
+                                        <input class="input--style-5" type="text" name="staff_id">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row m-b-55">
+                    <div class="name">Name</div>
+                    <div class="value">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="text" name="first_name">
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="text" name="last_name">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row m-b-55">
+                    <div class="name">sex</div>
+                    <div class="value">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="text" name="sex">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="form-row m-b-55">
+                        <div class="name">date of birth</div>
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group-desc">
+                                        <input class="input--style-5" type="date" name="dob">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row m-b-55">
+                    <div class="name">position</div>
+                    <div class="value">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="text" name="position">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="name">salary</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <input class="input--style-5" type="number" name="salary">
+
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="form-row m-b-55" id="position">
+                    <div class="name">branch id</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <select class="input--style-5" name="branchNo">
+                              <option value="B001">B001</option>
+                              <option value="B002">B002</option>
+                              <option value="B003">B003</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                    
+                
+                
+
+
+
+
+
+
+                <h3 id="position">enter details if applicable</h3>
+
+                
+                <div class="form-row m-b-55">
+                    <div class="name">manager start date</div>
+                    <div class="value">
+                        <div class="row row-refine">
+                            <div class="col-5">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="date" name="mgr_start_date">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row m-b-55">
+                    <div class="name">supervisor id</div>
+                    <div class="value">
+                        <div class="row row-refine">
+                            <div class="col-5">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="text" name="supervisor_id">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row m-b-55">
+                    <div class="name">manager bonus</div>
+                    <div class="value">
+                        <div class="row row-refine">
+                            <div class="col-5">
+                                <div class="input-group-desc">
+                                    <input class="input--style-5" type="number" name="mgr_bonus">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer") -%>

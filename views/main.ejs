@@ -1,0 +1,105 @@
+<%- include("partials/header") -%>
+<style>
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .card-header {
+    background-color: #77b2f6;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .street, .rent {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .street {
+    color: #777777;
+  }
+  
+  .rent {
+    color: #000000;
+    font-weight: bold;
+  }
+</style>
+<div class="text-center">
+<div class="row mx-auto">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Staff Display</h3>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <a href="/staffdisplay" class="btn btn-primary">GO!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Property Display</h3>
+            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+            <a href="/property_display" class="btn btn-primary">GO!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Queries Display</h3>
+            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+            <a href="/query" class="btn btn-primary">GO!</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="card-deck">
+        <h1>Weekly Top Advertisers</h1>
+        <br>
+        <br>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    
+          <% for (let i = 0; i < 3; i++) { %>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal"><%= item[i].propertyNo %></h4>
+              </div>
+              <div class="card-body">
+                <p class="street"><%= item[i].street %></p>
+                <p class="rent"><%= item[i].rent %></p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+          
+        </div>
+    </div>
+    
+
+
+
+      
+    
+<%- include("partials/footer") -%>

@@ -1,0 +1,63 @@
+<%- include("partials/header") -%>
+
+<form id="my-form" action="/getProperty" method="POST">
+  <div class="btn-group">
+    <label for="cars" class="btn btn-secondary dropdown-toggle">Choose an Option:</label>
+    <select name="isrented" id="cars" class="btn">
+      <option name="all" value="all">All</option>
+      <option name="rented" value="rented">Rented</option>
+      <option name="notrented" value="notrented">Not Rented</option>
+    </select>
+    <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+  </div>
+</form>
+
+<hr>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">propertyNo</th>
+      <th scope="col">staffNo</th>
+      <th scope="col">Street</th>
+      <th scope="col">ownerNo</th>
+      <th scope="col">City</th>
+      <th scope="col">postCode</th>
+      <th scope="col">Type</th>
+      <th scope="col">Rooms</th>
+      <th scope="col">Rent</th>
+      <!-- <th scope="col">isRented</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <% if(result.length==0){ %>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <% }else{ %>
+    <% result.forEach((item) => { %>
+      <tr>
+        <td><%= item.propertyNo %></td>
+        <td><%= item.staffNo %></td>
+        <td><%= item.street %></td>
+        <td><%= item.ownerNo %></td>
+        <td><%= item.city %></td>
+        <td><%= item.postcode %></td>
+        <td><%= item.type %></td>
+        <td><%= item.rooms %></td>
+        <td><%= item.rent %></td>
+      </tr>
+    <% }) %>
+    <% } %>
+  </tbody>
+
+</table>
+<%- include("partials/footer") -%>
